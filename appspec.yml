@@ -2,15 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html
+    destination: /var/www/html      # Copies the code from root folder to /var/www/html
     overwrite: true
 file_exists_behavior: OVERWRITE   
 hooks:
   AfterInstall:
-    - location: scripts/start_server.sh
+    - location: scripts/start_server.sh          #This lifecycle hooks starts the application. The script is located in scripts folder.    
       timeout: 30
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server.sh
+    - location: scripts/stop_server.sh           #This lifecycle hooks stops the application. The script is located in scripts folder.
       timeout: 30
       runas: root
