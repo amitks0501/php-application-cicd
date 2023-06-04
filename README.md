@@ -5,7 +5,15 @@ CICD of PHP application Using AWS Tools using:
 2. AWS Code Build
 3. AWS CodePipeline
 
-Scripts folder consist of script to start and stop the httpd service.
+Pre-Requisite:
+a. An EC2 instance with LAMO stack installed. Please check the following guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
+
+b. Code deploy agent installed on the instance. https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-linux.htm
+
+
+
+Scripts folder hold the command to start and stop the httpd service.
+
 
 Creating an IAM Role for Codedeploy:
 
